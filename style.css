@@ -134,6 +134,126 @@ h1 {
   font-weight: 600;
 }
 
+.schedule-table {
+  margin: 2rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.schedule-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.schedule-row:last-child {
+  border-bottom: none;
+}
+
+.schedule-cell {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.schedule-cell.header {
+  font-weight: 600;
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.schedule-cell.module {
+  font-weight: 500;
+  color: #111827;
+}
+
+.schedule-cell.date {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.schedule-cell.room {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.schedule-row:hover {
+  background-color: #f8fafc;
+}
+
+.schedule-row.expandable .schedule-cell.module {
+  padding: 0;
+}
+
+.schedule-row.expandable .schedule-cell.module details {
+  width: 100%;
+}
+
+.schedule-row.expandable .schedule-cell.module summary {
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #111827;
+  list-style: none;
+}
+
+.schedule-row.expandable .schedule-cell.module summary:hover {
+  background-color: #f3f4f6;
+}
+
+.schedule-row.expandable .schedule-cell.module summary::-webkit-details-marker {
+  display: none;
+}
+
+.schedule-row.expandable .schedule-cell.module summary::before {
+  content: "▶";
+  margin-right: 0.5rem;
+  color: #6366f1;
+  transition: transform 0.2s ease;
+}
+
+.schedule-row.expandable .schedule-cell.module details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.module-details {
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.detail-item {
+  margin-bottom: 1rem;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-item strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.detail-item ul {
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+}
+
+.detail-item li {
+  margin-bottom: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 3rem;
