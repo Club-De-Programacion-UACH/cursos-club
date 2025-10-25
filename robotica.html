@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concurso de Robótica</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <h2>Concurso de Robótica</h2>
+      <section id="course-space">
+        <a id="back" href="/cursos-club">← Regresar</a>
+      </section>
+      <div id="course-content">
+        <p>
+          <strong>Requisitos previos:</strong> Ninguno, pero conocimientos sobre
+          Python y uso de Arduino / dispositivos IoT son un plus.
+        </p>
+        <h3>Calendario del Concurso</h3>
+        <div class="schedule-table">
+          <div class="schedule-header">
+            <div class="schedule-cell header">Evento</div>
+            <div class="schedule-cell header">Fecha</div>
+            <div class="schedule-cell header">Lugar</div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-cell module">Preparación</div>
+            <div class="schedule-cell date">27 Oct - 17 Nov</div>
+            <div class="schedule-cell room">Laboratorio IoT</div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-cell module">Competencia</div>
+            <div class="schedule-cell date">19 Noviembre</div>
+            <div class="schedule-cell room">
+              <a href="https://maps.app.goo.gl/ev9MZWH37T93XVnSA"
+                >Museo Semilla</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <h2 class="module-details">Preparación</h2>
+        <p>
+          Dependiendo de su nivel de experiencia los temas a tratar para la
+          preparación al evento se pueden ajustar. Lo que más se busca es
+          interes en participar y aprender.
+        </p>
+
+        <h2 class="module-details">Información de Registro</h2>
+        <p><strong>Proceso de Inscripción</strong></p>
+        <ul>
+          <li>Envíar email a clubprog@uach.mx</li>
+          <li>
+            Incluye: nombre, edad, nivel de experiencia (Python básico,
+            intermedio, conocimiento de IoT, etc.)
+          </li>
+          <li>*Nota: Se proporciona el equipo necesario para la práctica.</li>
+        </ul>
+
+        <h2 class="module-details">Ejemplo de Control de LEDs</h2>
+        <ul>
+          <li>
+            <strong>Programación de Patrones de Luz</strong>
+            <ul>
+              <li>Control básico de GPIO con Python</li>
+              <li>Uso de la librería gpiozero</li>
+              <li>Creación de secuencias de luces</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Ejemplo de Código</strong>
+            <div class="highlight">
+              <pre><span class="kn">from</span><span class="w"> </span><span class="nn">gpiozero</span><span class="w"> </span><span class="kn">import</span> <span class="n">LED</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">led</span> <span class="o">=</span> <span class="n">LED</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></pre>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
